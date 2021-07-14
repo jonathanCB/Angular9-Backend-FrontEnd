@@ -1,0 +1,18 @@
+.footer {
+    background-color: gainsboro;
+    color: black;
+
+    /*Colocando o footer na parte de baixo da page:*/
+    position: fixed;
+    bottom: 0;
+    /*---------------------------------------------*/
+
+    display: flex;
+    /*Conteúdo vai para a parte inferior direita da page.*/
+    justify-content: flex-end;
+}
+
+.footer > span {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
