@@ -1,0 +1,36 @@
+Iniciar backend: npm start
+
+Iniciar frontend: ng serve --port 4200 -o
+______________________________________________________________
+
+Criar componente header: ng g c components/template/header 
+
+Criar componente footer: ng g c components/template/footer
+
+1 - Quando criamos um componente novo, devemos criar uma referência para ele no arquivo app.component.html que é o arquivo html principal da aplicação:
+<app-header></app-header>
+<app-footer></app-footer>
+
+Para fazermos alterações em algum componente, header ou footer por exemplo, devemos mecher nos arquivos correspondentes criados em app/components/template/<nome do componente>
+
+2 - Quando criamos o componente, ele automaticamente é referenciado no arquivo app.module.ts:
+import { HeaderComponent } from './components/template/header/header.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FooterComponent } from './components/template/footer/footer.component'
+
+3 - O arquivo css global é o style.css. As configurações feitas nele serão utilizadas em todos os componentes da aplicação.
+
+4 - Para a aplicação em questão, estamos importando 3 módulos, são eles:
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
+imports: [
+    BrowserModule, (PADRÃO)
+    AppRoutingModule, (PADRÃO)
+    BrowserAnimationsModule, (PADRÃO)
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
+  ],
