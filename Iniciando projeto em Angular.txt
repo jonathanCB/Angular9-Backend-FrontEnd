@@ -1,0 +1,70 @@
+1 - Instalar o angular:
+
+npm install -g @angular/cli
+
+-------------------------------------------------------
+
+2 - Entrar na pasta do projeto e iniciar o Angular:
+
+npm init -y
+
+obs: Ele criará o arquivo package.json
+
+-------------------------------------------------------
+
+3 - Instalando a dependência do JSON server no package.json para podermos construir nossa api.
+
+npm i json-server
+
+-------------------------------------------------------
+
+4 - Criando nosso "db" simples em JSON:
+
+1 - Criar um arquivo chamado db.json
+
+2 - Inserir estes dados:
+
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Caneta BIC Preta",
+        "price": 5.89
+      },
+      {
+        "id": 2,
+        "name": "Notebook Mac Pro",
+        "price": 12000.89
+      },
+      {
+        "id": 3,
+        "name": "Samsung S10 Lite",
+        "price": 2449.9
+      }
+    ]
+  }
+
+-------------------------------------------------------
+
+5 - Configurar o arquivo package.json:
+
+//Chamando o json server, monitorar o arquivo db.json na porta 3001.
+"start": "json-server --watch db.json --port 3001"
+
+-------------------------------------------------------
+
+6 - Api funcionando!
+
+1 - Para testar:
+
+npm start
+
+2 - Temos somente um endpoint:
+
+http://localhost:3001/products
+
+// Podemos fazer requisições com o Postman.
+
+-------------------------------------------------------
+
+
