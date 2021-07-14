@@ -1,0 +1,25 @@
+------------------- EXPLICAÇÃO DE ALGUNS ARQUIVOS DO PROJETO -------------------
+
+angular.json = arquivo que contém algumas configurações do nosso projeto.
+
+main.ts = Carrega o AppModule (Módulo principal).
+
+frontend > src > app = Contém os arquivos da nossa aplicação.
+
+	app.component.ts = Página inicial do nosso site.
+
+	app.modules.ts > "bootstrap:" = Arquivo onde inicializaremos nossos módulos. app.modules.ts aponta 	para nosso app.component.ts.
+
+frontend > src > assets = Colocar elementos como imagens e fontes.
+
+frontend > src > environments.ts = Variáveis de ambiente.
+
+frontend > src > index.html = Aponta para o nosso componente raiz (app.component.ts)
+	No app.components.ts temos o seletor 'app-root', o mesmo referenciado no index.html.
+
+Através desta tag conseguimos referenciar outra página para ser a página inicial do site, ao invés de ser a página padrão do Angular (O arquivo referenciado deve existir):
+
+frontend > src > app > app.component.ts (Colocamos a baixo do selector: 'app-root') =
+
+templateUrl: 'app.component.html'
+

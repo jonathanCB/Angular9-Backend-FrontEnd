@@ -1,0 +1,10 @@
+1 - Instalação do material na nossa aplicação e explicações da instação:
+
+ng add @angular/material
+
+The package @angular/material@12.1.1 will be installed and executed.
+Would you like to proceed? Yes
+✔ Package successfully installed.
+? Choose a prebuilt theme name, or "custom" for a custom theme: Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey ] 		//Tema da nossa aplicação
+? Set up global Angular Material typography styles? Yes 	//Utilizar o tema em toda a aplicação? Sim.
+? Set up browser animations for Angular Material? Yes 		//Utilizar as animações de browser em toda a aplicação? Sim.
