@@ -1,3 +1,7 @@
+Instalar o Angular: npm i -g @angular/cli
+
+Criar um projeto Angular: ng new nomeprojeto
+
 Iniciar backend: npm start
 
 Iniciar frontend: ng serve --port 4200 -o

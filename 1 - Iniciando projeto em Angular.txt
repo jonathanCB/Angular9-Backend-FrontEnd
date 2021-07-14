@@ -67,4 +67,29 @@ http://localhost:3001/products
 
 -------------------------------------------------------
 
+7 - Instalar o Angular:
+
+npm i -g @angular/cli
+
+-------------------------------------------------------
+
+8 - Criando um projeto Angular:
+
+ng new frontend OU ng new frontend --minimal //Para projetos com o minimo de arquivos.
+
+? Would you like to add Angular routing? (y/N) s
+
+CSS
+
+-------------------------------------------------------
+
+9 - Iniciar o projeto Angular:
+
+Iniciar backend e frontend: npm start //Iniciar separadamente. Podemos abrir dois terminais.
+
+10 - Testar no navegador:
+
+http://localhost:4200/
+
+- Abrirá a página padrão do Angular.
 
