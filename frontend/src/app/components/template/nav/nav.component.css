@@ -4,9 +4,15 @@
 }
 
 .sidenav a {
-    
+    color: #fff;
 }
 
 .sidenav i {
     padding-right: 10px;
+}
+
+.content {
+    color: black;
+    padding: 16px;
+    background-color: white;
 }
