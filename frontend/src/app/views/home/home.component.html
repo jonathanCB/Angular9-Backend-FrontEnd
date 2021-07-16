@@ -3,4 +3,13 @@
     <mat-card-subtitle class="subtitle">
         Sistema para exemplificar a construção de um cadastro em Angular
     </mat-card-subtitle>
+
+    <ul>
+        <!--Aqui estamos nossa diretiva criada 'myFor'.
+            Estamos passando um array de 3 números para nossa diretiva,
+            nossa diretiva contém um 'for' que opera sobre um array de
+            números. Através da interpolação 'chaves chaves n chaves chaves',
+            acessamos o valor de 'n'.-->
+        <li *myFor="let n em [1, 2, 3]">{{ n }}</li>
+    </ul>
 </mat-card>

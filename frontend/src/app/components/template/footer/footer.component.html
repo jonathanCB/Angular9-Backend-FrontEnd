@@ -1,7 +1,7 @@
 <mat-toolbar class="footer">
     <span>
         Desenvolvido
-        <!--material-icons é uma clsse que serve para
+        <!--material-icons é uma classe que serve para
             utilizarmos icones do material. 
             red é uma classe que criamos no arquivo css
             principal da aplicação 'style.css', para 
@@ -9,11 +9,19 @@
             na cor vermelha.
             v-middle é uma classe que criamos no arquivo css
             principal da aplicação 'style.css', para alinhar 
-            o coração na linha.-->
+            o coração na linha.
         por <strong>Jonathan</strong>
         através dos videos da <strong>Cod<span class="red">3</span>r </strong> 
         <i class="material-icons red v-middle">
             favorite
-        </i>
+        </i>-->
+            por <strong>Jonathan</strong>
+            através dos vídeos da <strong>Cod<span class="red">3</span>r </strong> 
+            <!--A partir de agora não o usaremos mais a classe 'red' no <3, 
+                agora usaremos a diretiva appRed que criamos em:
+                src > app > directives > red.directive.ts-->
+            <i class="material-icons v-middle" appRed>
+                favorite
+            </i>        
     </span>
 </mat-toolbar>
