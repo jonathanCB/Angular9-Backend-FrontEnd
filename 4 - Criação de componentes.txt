@@ -8,6 +8,44 @@ CREATE src/app/components/template/header/header.component.css (0 bytes)
 UPDATE src/app/app.module.ts (525 bytes)
 
 Criar componente footer: ng g c components/template/footer
+Nosso componente foi criado:
+CREATE src/app/components/template/footer/footer.component.html (21 bytes)
+CREATE src/app/components/template/footer/footer.component.ts (275 bytes)
+CREATE src/app/components/template/footer/footer.component.css (0 bytes)
+UPDATE src/app/app.module.ts (525 bytes)
+
+Criar componente de navegação: ng g c components/template/nav
+Nosso componente foi criado:
+CREATE src/app/components/template/nav/nav.component.html (18 bytes)
+CREATE src/app/components/template/nav/nav.component.ts (263 bytes)
+CREATE src/app/components/template/nav/nav.component.css (0 bytes)
+UPDATE src/app/app.module.ts (880 bytes)
+
+Criar componente home: ng g c views/home
+Nosso componente foi criado:
+CREATE src/app/views/home/home.component.html (19 bytes)
+CREATE src/app/views/home/home.component.ts (267 bytes)
+CREATE src/app/views/home/home.component.css (0 bytes)
+UPDATE src/app/app.module.ts (1120 bytes)
+
+Criar componente product-crud: ng g c views/product-crud
+Nosso componente foi criado:
+CREATE src/app/views/product-crud/product-crud.component.html (27 bytes)
+CREATE src/app/views/product-crud/product-crud.component.ts (298 bytes)
+CREATE src/app/views/product-crud/product-crud.component.css (0 bytes)
+UPDATE src/app/app.module.ts (1305 bytes)
+
+Criar componente de criação de um produto: ng g c components/product/product-create
+Nosso componente foi criado:
+CREATE src/app/components/product/product-create/product-create.component.html (29 bytes)
+CREATE src/app/components/product/product-create/product-create.component.ts (306 bytes)
+CREATE src/app/components/product/product-create/product-create.component.css (0 bytes) 
+UPDATE src/app/app.module.ts (1590 bytes)
+OBS: Este componente precisa ser importado no arquivo app-routing.module.ts
+{
+  path: "products/create",
+  component: ProductCreateComponent
+}
 
 1 - Quando criamos um componente novo, devemos criar uma referência para ele no arquivo app.component.html que é o arquivo html principal da aplicação:
 <app-header></app-header>
@@ -43,3 +81,43 @@ imports: [
     MatSidenavModule,
     MatListModule
   ],
+
+------------------- ROTAS ----------------------
+
+As rotas vão servir para que possamos usar os links de menu (navegar entre os itens do menu).
+
+Devemos adicionar no arquivo app-routing.module.ts o seguinte:
+
+import { HomeComponent } from './views/home/home.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+
+const routes: Routes = [{
+  path: "",
+  component: HomeComponent
+}, {
+  path: "products",
+  component: ProductCrudComponent
+}
+];
+
+Devemos acrescentar a tag ' routerLink="" ' nos links do nosso menu:
+
+<a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    home
+                </i>
+                Início
+            </a>
+            <a mat-list-item routerLink="/products">
+                <i class="material-icons">
+                    storefront
+                </i>
+                Produtos
+            </a>
+
+------------------- CRIANDO DIRETIVAS ----------------------
+
+Criar diretiva red: ng g d directives/red
+Diretiva criada:
+CREATE src/app/directives/red.directive.ts (135 bytes)
+UPDATE src/app/app.module.ts (1382 bytes)
