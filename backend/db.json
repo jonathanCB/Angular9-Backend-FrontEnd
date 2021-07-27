@@ -24,6 +24,11 @@
       "name": "Produto de teste",
       "price": 125.98,
       "id": 5
+    },
+    {
+      "name": "Joystick Android",
+      "price": "149.99",
+      "id": 6
     }
   ]
 }
