@@ -19,6 +19,11 @@
       "id": 4,
       "name": "Headset Redragon",
       "price": "299.99"
+    },
+    {
+      "name": "Produto de teste",
+      "price": 125.98,
+      "id": 5
     }
   ]
 }
