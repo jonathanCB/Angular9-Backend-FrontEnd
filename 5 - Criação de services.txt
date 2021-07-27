@@ -1,0 +1,52 @@
+1 - Criando o service para product: ng g s components/product/product
+Nosso service foi criado:
+CREATE src/app/components/product/product.service.ts (136 bytes)
+
+//Importando snack-bar no arquivo product.service.ts:
+import { MatSnackBar } from '@angular/material/snack-bar'
+
+//Injetando snack-bar no construtor:
+  constructor(private snackBar: MatSnackBar) { }
+
+ //Método que utilizará o snack-bar para mostrar uma mensagem na page quando clicar no botão 'Salvar':
+  showMessage(msg: string): void {
+    this.snackBar.open(msg, 'X', {
+      duration: 3000,
+      horizontalPosition: "right",
+      verticalPosition: "top"
+    })
+  }
+
+2 - Importando o MatSnackBarModule no app.module.ts:
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+imports: [
+    MatSnackBarModule
+]
+
+3 - Utilizando o service no nosso componente product-create:
+----- product-create.component.ts: ------
+//Imports
+import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
+
+//Injetando as dependências de ProductService e Router no construtor:
+constructor(private productService: ProductService, private router: Router) { }
+
+//Criação dos métodos que serão utilizados pelos nossos botões:
+createProduct(): void {
+    this.productService.showMessage('Produto criado!')
+  }
+
+  cancel(): void {
+    this.router.navigate(['/products'])
+  }
+
+4 - Utilizando os métodos criados nos nossos botões, no arquivo product-create.component.html:
+<button mat-raised-button (click)="createProduct()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>
