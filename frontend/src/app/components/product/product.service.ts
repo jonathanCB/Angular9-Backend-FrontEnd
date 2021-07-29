@@ -33,6 +33,7 @@ export class ProductService {
     return this.http.post<Product>(this.baseUrl, product);
   }
 
+  //Retornaremos um Observable de um array de Product.
   read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl)
   }
