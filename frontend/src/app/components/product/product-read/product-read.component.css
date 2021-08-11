@@ -1,3 +1,16 @@
-ul li {
+table {
+    /*Ocupar toda a largura da tela: width: 100%;*/
+    width: 100%;   
+    background-color: white;    
+    border-color: black;
+}
+
+table th {
     color: black;
+    border-color: rgba(128, 128, 128, 0.219);
+}
+
+table td {
+    color: black;
+    border-color: rgba(128, 128, 128, 0.219);
 }

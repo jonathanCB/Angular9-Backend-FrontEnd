@@ -21,19 +21,9 @@
       "price": "299.99"
     },
     {
-      "name": "Produto de teste",
-      "price": 125.98,
+      "name": "Borracha",
+      "price": "1.49",
       "id": 5
-    },
-    {
-      "name": "Joystick Android",
-      "price": "149.99",
-      "id": 6
-    },
-    {
-      "name": "Playstation 4",
-      "price": "2499.95",
-      "id": 7
     }
   ]
 }
