@@ -30,7 +30,10 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let row">
-          <a routerLink="" class="edit">
+          <!-- row.id serve para pegarmos o id do produto que queremos atualizar, pois, nosso método 'update'
+          exige um id do produto. Para que tudo isso seja possível, nós tivemos que configurar a rota no 
+          arquivo app-routing.module.ts.-->
+          <a routerLink="/products/update/{{ row.id }}" class="edit">
             <i class="material-icons">
               edit
             </i>
