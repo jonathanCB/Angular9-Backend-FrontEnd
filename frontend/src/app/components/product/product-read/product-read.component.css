@@ -14,3 +14,15 @@ table td {
     color: black;
     border-color: rgba(128, 128, 128, 0.219);
 }
+
+.edit {
+    margin-right: 10px;
+}
+
+.edit > i{
+    color: #d9cd26;
+}
+
+i.delete {
+    color: #e35e6b;
+}

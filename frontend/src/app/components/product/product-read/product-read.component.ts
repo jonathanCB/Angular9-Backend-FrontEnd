@@ -11,7 +11,7 @@ export class ProductReadComponent implements OnInit {
 
   //Array para os produtos que receberemos do backend:
   products: Product[] = [];
-  displayedColumns = ['id', 'name', 'price'];
+  displayedColumns = ['id', 'name', 'price', 'action'];
 
   //Inicializando o construtor com um productService que contém nosso método read():
   constructor(private productService: ProductService) { }
